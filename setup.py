@@ -32,7 +32,7 @@ setup(
         'Programming Language :: Python :: 3 :: Only',
         
         'License :: OSI Approved :: MIT License',
-        'Operating System :: MICROSOFT :: WINDOWS',
+        'Operating System :: Microsoft :: Windows',
         
         'Typing :: Typed',
     ],
