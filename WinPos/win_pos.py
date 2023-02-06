@@ -17,6 +17,9 @@ def get_window_hwnd(name: Union[str, Callable[[str], bool]]) -> Union[None, str]
         if is_desired_window(win32gui.GetWindowText(hwnd)):
             raise WindowData(hwnd)
     
+    if isinstance(name, str):
+        hwnd = win32gui.FindWindow(None, name)
+        return None if hwnd is 0 else hwnd
     try:
         win32gui.EnumWindows(callback, None)
     except WindowData as e:
